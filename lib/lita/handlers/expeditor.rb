@@ -15,36 +15,13 @@
 # limitations under the License.
 #
 
-require "expeditor"
-
 module Lita
   module Handlers
     # This lita plugin handles all the communication between the user and
     # the helper classes. Any communication going to the user should be
-    # handled by this class. Any logging that needs to happen should be
-    # handled by the helper classes via the `robot` instance that's passed
-    # to each helper class instance.
-    #
-    # Lita::Robot :: https://github.com/litaio/lita/blob/master/lib/lita/robot.rb
-    #
+    # handled by this class.
     class Expeditor < Handler
-
-      # @return [::Expeditor::Github] Interface to Github calls
-      attr_reader :github
-
-      # @return [::Expeditor::Jenkins] Interface to Jenkins calls
-      attr_reader :jenkins
-
-      # @return [::Expeditor::Slack] Interface with Slack
-      attr_reader :slack
-
-      def initialize(robot)
-        super(robot)
-
-        @github = ::Expeditor::Github.new(robot)
-        @jenkins = ::Expeditor::Jenkins.new(robot)
-        @slack = ::Expeditor::Slack.new(robot)
-      end
+      include ::Expeditor::Slack::Format
 
       #
       # Configuration
@@ -53,7 +30,7 @@ module Lita
       # @return [Hash] Hash of 1 or more Jenkins configuration hashes.
       #
       # @example Configuration with mulitple connections
-      #   endpoints = {
+      #   jenkins_endpoints = {
       #     volleyball: {
       #        uri: http://volleyball.ci.chef.co",
       #        username: chef-survivor",
@@ -76,19 +53,20 @@ module Lita
         case request.env["HTTP_X_GITHUB_EVENT"]
         # https://developer.github.com/v3/activity/events/types/#pullrequestevent
         when "pull_request"
-          payload = github.extract_payload(request)
+          payload = ::Expeditor::Github.extract_payload(request)
 
           case payload["action"]
           when "opened"
-            github.handle_pr_opened(payload)
+            ::Expeditor::Github.handle_pr_opened(payload)
           when "closed"
-            github.handle_pr_closed(payload)
+            ::Expeditor::Github.handle_pr_closed(payload)
           when "labeled", "unlabeled"
-            github.handle_pr_label(payload)
+            ::Expeditor::Github.handle_pr_label(payload)
           end
         # https://developer.github.com/v3/activity/events/types/#pullrequestreviewevent
         when "pull_request_review"
-          github.handle_pr_review(github.extract_payload(request))
+          payload = ::Expeditor::Github.extract_payload(request)
+          ::Expeditor::Github.handle_pr_review(payload)
         end
       end
 
@@ -102,21 +80,21 @@ module Lita
         /^jenkins\s+build\s+#{REGEX.source}\s+#{REGEX.source}/i,
         command: true,
         help: {
-          "jenkins build PROJECT GIT_REF" => "Trigger an ad-hoc build for PROJECT at GIT_REF"
+          "jenkins build PROJECT GIT_REF" => "Trigger an ad-hoc build for PROJECT using GIT_REF",
         }
       ) do |response|
         project = response.args[1]
         git_ref = response.args[2]
 
-        if jenkins.available_projects.include?(project)
+        if available_jenkins_projects.include?(project)
           begin
-            jenkins.trigger_build(project, git_ref)
-            slack.respond("Kicked off a Jenkins build for '#{project}' at '#{git_ref}'")
+            ::Expeditor::Jenkins.trigger_build(project, git_ref, response.user.name)
+            response.success("Kicked off an ad-hoc Jenkins build for '#{project}' at '#{git_ref}'")
           rescue ::Expeditor::Jenkins::HTTPError => e
-            slack.respond_error(e.message)
+            response.error("Sorry, received HTTP error kicking off '#{project}' build at '#{git_ref}': #{backquote(e.message)}")
           end
         else
-          slack.respond_warn("An ad-hoc trigger for '#{project}' could not be found. Please specify one of the following projects: #{jenkins.available_projects.join(", ")}")
+          response.error("An ad-hoc trigger for '#{project}' could not be found. Please specify one of the following projects: #{available_jenkins_projects}")
         end
       end
 
@@ -125,14 +103,10 @@ module Lita
         /^jenkins\s+list/i,
         command: true,
         help: {
-          "jenkins list" => "List the projects available for ad-hoc build"
+          "jenkins list" => "List the projects available for ad-hoc build",
         }
       ) do |response|
-        begin
-          slack.respond("You can trigger an ad-hoc build for the following projects: #{jenkins.available_projects.join(", ")}")
-        rescue ::Expeditor::Jenkins::HTTPError => e
-          slack.respond_error(e.message)
-        end
+        response.success("You can trigger an ad-hoc build for the following projects: #{available_jenkins_projects}")
       end
 
       # Refresh the list of jenkins projects
@@ -140,14 +114,14 @@ module Lita
         /^jenkins\s+refresh/,
         command: true,
         help: {
-          "jenkins refresh" => "Refresh the list of ad-hoc triggers available to build"
+          "jenkins refresh" => "Refresh the list of ad-hoc triggers available to build",
         }
       ) do |response|
         begin
-          jenkins.refresh_projects
-          slack.respond("You can trigger an ad-hoc build for the following projects: #{jenkins.available_projects.join(", ")}")
+          ::Expeditor::Jenkins.refresh_projects
+          response.success("You can trigger an ad-hoc build for the following projects: #{available_jenkins_projects}")
         rescue ::Expeditor::Jenkins::HTTPError => e
-          slack.respond_error(e.message)
+          response.error("Sorry, received HTTP error refreshing the list of projects: #{backquote(e.message)}")
         end
       end
 
@@ -157,12 +131,18 @@ module Lita
 
       # Once every day, refresh the list of ad-hoc triggers
       on :loaded do |_payload|
-        every(86400) { jenkins.refresh_projects }
+        every(86400) { ::Expeditor::Jenkins.refresh_projects }
       end
 
       # Required by Lita - register this plugin with the Lita instance
       Lita.register_handler(self)
 
+      private
+
+      # @return [String] Available projects separated by comma
+      def available_jenkins_projects
+        ::Expeditor::Jenkins.available_projects.join(", ")
+      end
     end
   end
 end

@@ -1,0 +1,313 @@
+{
+  "assignedLabels" : [
+    {
+
+    }
+  ],
+  "mode" : "NORMAL",
+  "nodeDescription" : "the master Jenkins node",
+  "nodeName" : "",
+  "numExecutors" : 2,
+  "description" : null,
+  "jobs" : [
+    {
+      "name" : "angry-omnibus-toolchain-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/angry-omnibus-toolchain-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "angry-omnibus-toolchain-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/angry-omnibus-toolchain-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "angrychef-build",
+      "url" : "http://manhattan.ci.chef.co/job/angrychef-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "angrychef-promote",
+      "url" : "http://manhattan.ci.chef.co/job/angrychef-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "angrychef-test",
+      "url" : "http://manhattan.ci.chef.co/job/angrychef-test/",
+      "color" : "red"
+    },
+    {
+      "name" : "angrychef-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/angrychef-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "angrychef-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/angrychef-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-11-build",
+      "url" : "http://manhattan.ci.chef.co/job/chef-11-build/",
+      "color" : "aborted"
+    },
+    {
+      "name" : "chef-11-promote",
+      "url" : "http://manhattan.ci.chef.co/job/chef-11-promote/",
+      "color" : "notbuilt"
+    },
+    {
+      "name" : "chef-11-test",
+      "url" : "http://manhattan.ci.chef.co/job/chef-11-test/",
+      "color" : "notbuilt"
+    },
+    {
+      "name" : "chef-11-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/chef-11-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-11-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/chef-11-trigger-release/",
+      "color" : "notbuilt"
+    },
+    {
+      "name" : "chef-build",
+      "url" : "http://manhattan.ci.chef.co/job/chef-build/",
+      "color" : "red_anime"
+    },
+    {
+      "name" : "chef-promote",
+      "url" : "http://manhattan.ci.chef.co/job/chef-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-test",
+      "url" : "http://manhattan.ci.chef.co/job/chef-test/",
+      "color" : "blue_anime"
+    },
+    {
+      "name" : "chef-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/chef-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/chef-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chefdk-build",
+      "url" : "http://manhattan.ci.chef.co/job/chefdk-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chefdk-promote",
+      "url" : "http://manhattan.ci.chef.co/job/chefdk-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chefdk-test",
+      "url" : "http://manhattan.ci.chef.co/job/chefdk-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chefdk-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/chefdk-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chefdk-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/chefdk-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "harmony-build",
+      "url" : "http://manhattan.ci.chef.co/job/harmony-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "harmony-promote",
+      "url" : "http://manhattan.ci.chef.co/job/harmony-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "harmony-test",
+      "url" : "http://manhattan.ci.chef.co/job/harmony-test/",
+      "color" : "red"
+    },
+    {
+      "name" : "harmony-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/harmony-trigger-ad_hoc/",
+      "color" : "notbuilt"
+    },
+    {
+      "name" : "harmony-trigger-git_poll",
+      "url" : "http://manhattan.ci.chef.co/job/harmony-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "harmony-trigger-nightly-master",
+      "url" : "http://manhattan.ci.chef.co/job/harmony-trigger-nightly-master/",
+      "color" : "blue"
+    },
+    {
+      "name" : "harmony-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/harmony-trigger-release/",
+      "color" : "notbuilt"
+    },
+    {
+      "name" : "inspec-build",
+      "url" : "http://manhattan.ci.chef.co/job/inspec-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "inspec-promote",
+      "url" : "http://manhattan.ci.chef.co/job/inspec-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "inspec-test",
+      "url" : "http://manhattan.ci.chef.co/job/inspec-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "inspec-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/inspec-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "inspec-trigger-git_poll",
+      "url" : "http://manhattan.ci.chef.co/job/inspec-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "inspec-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/inspec-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "omnibus-toolchain-build",
+      "url" : "http://manhattan.ci.chef.co/job/omnibus-toolchain-build/",
+      "color" : "red"
+    },
+    {
+      "name" : "omnibus-toolchain-promote",
+      "url" : "http://manhattan.ci.chef.co/job/omnibus-toolchain-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "omnibus-toolchain-test",
+      "url" : "http://manhattan.ci.chef.co/job/omnibus-toolchain-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "omnibus-toolchain-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/omnibus-toolchain-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "omnibus-toolchain-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/omnibus-toolchain-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "push-jobs-client-build",
+      "url" : "http://manhattan.ci.chef.co/job/push-jobs-client-build/",
+      "color" : "red"
+    },
+    {
+      "name" : "push-jobs-client-promote",
+      "url" : "http://manhattan.ci.chef.co/job/push-jobs-client-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "push-jobs-client-test",
+      "url" : "http://manhattan.ci.chef.co/job/push-jobs-client-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "push-jobs-client-trigger-ad_hoc",
+      "url" : "http://manhattan.ci.chef.co/job/push-jobs-client-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "push-jobs-client-trigger-git_poll",
+      "url" : "http://manhattan.ci.chef.co/job/push-jobs-client-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "push-jobs-client-trigger-nightly-master",
+      "url" : "http://manhattan.ci.chef.co/job/push-jobs-client-trigger-nightly-master/",
+      "color" : "blue"
+    },
+    {
+      "name" : "push-jobs-client-trigger-release",
+      "url" : "http://manhattan.ci.chef.co/job/push-jobs-client-trigger-release/",
+      "color" : "blue"
+    }
+  ],
+  "overallLoad" : {
+
+  },
+  "primaryView" : {
+    "name" : " Triggers",
+    "url" : "http://manhattan.ci.chef.co/"
+  },
+  "quietingDown" : false,
+  "slaveAgentPort" : 38529,
+  "unlabeledLoad" : {
+
+  },
+  "useCrumbs" : false,
+  "useSecurity" : true,
+  "views" : [
+    {
+      "name" : " Build Monitor",
+      "url" : "http://manhattan.ci.chef.co/view/%20Build%20Monitor/"
+    },
+    {
+      "name" : " Triggers",
+      "url" : "http://manhattan.ci.chef.co/"
+    },
+    {
+      "name" : "All",
+      "url" : "http://manhattan.ci.chef.co/view/All/"
+    },
+    {
+      "name" : "Angry Omnibus Toolchain",
+      "url" : "http://manhattan.ci.chef.co/view/Angry%20Omnibus%20Toolchain/"
+    },
+    {
+      "name" : "Angrychef",
+      "url" : "http://manhattan.ci.chef.co/view/Angrychef/"
+    },
+    {
+      "name" : "Chef",
+      "url" : "http://manhattan.ci.chef.co/view/Chef/"
+    },
+    {
+      "name" : "Chef 11",
+      "url" : "http://manhattan.ci.chef.co/view/Chef%2011/"
+    },
+    {
+      "name" : "Chefdk",
+      "url" : "http://manhattan.ci.chef.co/view/Chefdk/"
+    },
+    {
+      "name" : "Harmony",
+      "url" : "http://manhattan.ci.chef.co/view/Harmony/"
+    },
+    {
+      "name" : "Inspec",
+      "url" : "http://manhattan.ci.chef.co/view/Inspec/"
+    },
+    {
+      "name" : "Omnibus Toolchain",
+      "url" : "http://manhattan.ci.chef.co/view/Omnibus%20Toolchain/"
+    },
+    {
+      "name" : "Push Jobs Client",
+      "url" : "http://manhattan.ci.chef.co/view/Push%20Jobs%20Client/"
+    }
+  ]
+}

@@ -15,39 +15,43 @@
 # limitations under the License.
 #
 
-require "expeditor/github/client"
-
 module Expeditor
-  class Github
+  # Lita-facing API to communicate with Github
+  module Github
+    class << self
 
-    def initialize(robot)
-    end
+      def handle_pr_opened(payload)
+        # Coming Soon
+      end
 
-    def handle_pr_opened(payload)
-    end
+      def handle_pr_closed(payload)
+        # Coming Soon
+      end
 
-    def handle_pr_closed(payload)
-    end
+      def handle_pr_label(payload)
+        # Coming Soon
+      end
 
-    def handle_pr_label(payload)
-    end
+      def handle_pr_review(payload)
+        # Coming Soon
+      end
 
-    def handle_pr_review(payload)
-    end
-
-    # The location of the payload for a Github request can depend on the
-    # Content Type. Look at the media_type of the request and extract
-    # the payload accordingly.
-    def extract_payload(request)
-      case (media_type = request.media_type)
-      when "application/x-www-form-urlencoded"
-        MultiJson.load(request["payload"])
-      when "application/json"
-        MultiJson.load(request.body)
-      else
-        raise "GitHub web hooks: Invalid HTTP Content-Type header: #{media_type}"
+      # The location of the payload for a Github request can depend on the
+      # Content Type. Look at the media_type of the request and extract
+      # the payload accordingly.
+      #
+      # @param request [HTTP::Request] Incoming Github Event request object
+      # @return [Hash] Hash representation of Github Event Payload
+      def extract_payload(request)
+        case (media_type = request.media_type)
+        when "application/x-www-form-urlencoded"
+          MultiJson.load(request["payload"])
+        when "application/json"
+          MultiJson.load(request.body)
+        else
+          raise "GitHub web hooks: Invalid HTTP Content-Type header: #{media_type}"
+        end
       end
     end
-
   end
 end

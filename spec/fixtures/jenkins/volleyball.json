@@ -1,0 +1,412 @@
+{
+  "assignedLabels" : [
+    {
+
+    }
+  ],
+  "mode" : "NORMAL",
+  "nodeDescription" : "the master Jenkins node",
+  "nodeName" : "",
+  "numExecutors" : 2,
+  "description" : null,
+  "jobs" : [
+    {
+      "name" : "automate-build",
+      "url" : "http://wilson.ci.chef.co/job/automate-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "automate-promote",
+      "url" : "http://wilson.ci.chef.co/job/automate-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "automate-test",
+      "url" : "http://wilson.ci.chef.co/job/automate-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "automate-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/automate-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "automate-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/automate-trigger-release/",
+      "color" : "notbuilt"
+    },
+    {
+      "name" : "chef-analytics-build",
+      "url" : "http://wilson.ci.chef.co/job/chef-analytics-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-analytics-promote",
+      "url" : "http://wilson.ci.chef.co/job/chef-analytics-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-analytics-test",
+      "url" : "http://wilson.ci.chef.co/job/chef-analytics-test/",
+      "color" : "red"
+    },
+    {
+      "name" : "chef-analytics-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/chef-analytics-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-analytics-trigger-git_poll",
+      "url" : "http://wilson.ci.chef.co/job/chef-analytics-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-analytics-trigger-nightly-master",
+      "url" : "http://wilson.ci.chef.co/job/chef-analytics-trigger-nightly-master/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-analytics-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/chef-analytics-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-backend-build",
+      "url" : "http://wilson.ci.chef.co/job/chef-backend-build/",
+      "color" : "red"
+    },
+    {
+      "name" : "chef-backend-promote",
+      "url" : "http://wilson.ci.chef.co/job/chef-backend-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-backend-test",
+      "url" : "http://wilson.ci.chef.co/job/chef-backend-test/",
+      "color" : "red"
+    },
+    {
+      "name" : "chef-backend-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/chef-backend-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-backend-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/chef-backend-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-compliance-build",
+      "url" : "http://wilson.ci.chef.co/job/chef-compliance-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-compliance-promote",
+      "url" : "http://wilson.ci.chef.co/job/chef-compliance-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-compliance-test",
+      "url" : "http://wilson.ci.chef.co/job/chef-compliance-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-compliance-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/chef-compliance-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-compliance-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/chef-compliance-trigger-release/",
+      "color" : "red"
+    },
+    {
+      "name" : "chef-manage-build",
+      "url" : "http://wilson.ci.chef.co/job/chef-manage-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-manage-promote",
+      "url" : "http://wilson.ci.chef.co/job/chef-manage-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-manage-test",
+      "url" : "http://wilson.ci.chef.co/job/chef-manage-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-manage-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/chef-manage-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-manage-trigger-git_poll",
+      "url" : "http://wilson.ci.chef.co/job/chef-manage-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-manage-trigger-nightly-master",
+      "url" : "http://wilson.ci.chef.co/job/chef-manage-trigger-nightly-master/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-manage-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/chef-manage-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-marketplace-build",
+      "url" : "http://wilson.ci.chef.co/job/chef-marketplace-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-marketplace-promote",
+      "url" : "http://wilson.ci.chef.co/job/chef-marketplace-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-marketplace-test",
+      "url" : "http://wilson.ci.chef.co/job/chef-marketplace-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-marketplace-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/chef-marketplace-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-marketplace-trigger-git_poll",
+      "url" : "http://wilson.ci.chef.co/job/chef-marketplace-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-marketplace-trigger-nightly-master",
+      "url" : "http://wilson.ci.chef.co/job/chef-marketplace-trigger-nightly-master/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-marketplace-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/chef-marketplace-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-server-12-build",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-build/",
+      "color" : "red_anime"
+    },
+    {
+      "name" : "chef-server-12-fips-build",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-fips-build/",
+      "color" : "disabled"
+    },
+    {
+      "name" : "chef-server-12-fips-promote",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-fips-promote/",
+      "color" : "disabled"
+    },
+    {
+      "name" : "chef-server-12-fips-test",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-fips-test/",
+      "color" : "disabled"
+    },
+    {
+      "name" : "chef-server-12-promote",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-server-12-test",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-server-12-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-server-12-trigger-git_poll",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "chef-server-12-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/chef-server-12-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "delivery-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/delivery-trigger-ad_hoc/",
+      "color" : "red"
+    },
+    {
+      "name" : "delivery-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/delivery-trigger-release/",
+      "color" : "notbuilt"
+    },
+    {
+      "name" : "opscode-push-jobs-server-build",
+      "url" : "http://wilson.ci.chef.co/job/opscode-push-jobs-server-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-push-jobs-server-promote",
+      "url" : "http://wilson.ci.chef.co/job/opscode-push-jobs-server-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-push-jobs-server-test",
+      "url" : "http://wilson.ci.chef.co/job/opscode-push-jobs-server-test/",
+      "color" : "red"
+    },
+    {
+      "name" : "opscode-push-jobs-server-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/opscode-push-jobs-server-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-push-jobs-server-trigger-git_poll",
+      "url" : "http://wilson.ci.chef.co/job/opscode-push-jobs-server-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-push-jobs-server-trigger-nightly-master",
+      "url" : "http://wilson.ci.chef.co/job/opscode-push-jobs-server-trigger-nightly-master/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-push-jobs-server-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/opscode-push-jobs-server-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-reporting-build",
+      "url" : "http://wilson.ci.chef.co/job/opscode-reporting-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-reporting-promote",
+      "url" : "http://wilson.ci.chef.co/job/opscode-reporting-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-reporting-test",
+      "url" : "http://wilson.ci.chef.co/job/opscode-reporting-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-reporting-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/opscode-reporting-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-reporting-trigger-git_poll",
+      "url" : "http://wilson.ci.chef.co/job/opscode-reporting-trigger-git_poll/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-reporting-trigger-nightly-master",
+      "url" : "http://wilson.ci.chef.co/job/opscode-reporting-trigger-nightly-master/",
+      "color" : "blue"
+    },
+    {
+      "name" : "opscode-reporting-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/opscode-reporting-trigger-release/",
+      "color" : "blue"
+    },
+    {
+      "name" : "supermarket-build",
+      "url" : "http://wilson.ci.chef.co/job/supermarket-build/",
+      "color" : "blue"
+    },
+    {
+      "name" : "supermarket-promote",
+      "url" : "http://wilson.ci.chef.co/job/supermarket-promote/",
+      "color" : "blue"
+    },
+    {
+      "name" : "supermarket-test",
+      "url" : "http://wilson.ci.chef.co/job/supermarket-test/",
+      "color" : "blue"
+    },
+    {
+      "name" : "supermarket-trigger-ad_hoc",
+      "url" : "http://wilson.ci.chef.co/job/supermarket-trigger-ad_hoc/",
+      "color" : "blue"
+    },
+    {
+      "name" : "supermarket-trigger-release",
+      "url" : "http://wilson.ci.chef.co/job/supermarket-trigger-release/",
+      "color" : "blue"
+    }
+  ],
+  "overallLoad" : {
+
+  },
+  "primaryView" : {
+    "name" : " Triggers",
+    "url" : "http://wilson.ci.chef.co/"
+  },
+  "quietingDown" : false,
+  "slaveAgentPort" : 38529,
+  "unlabeledLoad" : {
+
+  },
+  "useCrumbs" : false,
+  "useSecurity" : true,
+  "views" : [
+    {
+      "name" : " Build Monitor",
+      "url" : "http://wilson.ci.chef.co/view/%20Build%20Monitor/"
+    },
+    {
+      "name" : " Triggers",
+      "url" : "http://wilson.ci.chef.co/"
+    },
+    {
+      "name" : "All",
+      "url" : "http://wilson.ci.chef.co/view/All/"
+    },
+    {
+      "name" : "Automate",
+      "url" : "http://wilson.ci.chef.co/view/Automate/"
+    },
+    {
+      "name" : "Chef Analytics",
+      "url" : "http://wilson.ci.chef.co/view/Chef%20Analytics/"
+    },
+    {
+      "name" : "Chef Backend",
+      "url" : "http://wilson.ci.chef.co/view/Chef%20Backend/"
+    },
+    {
+      "name" : "Chef Compliance",
+      "url" : "http://wilson.ci.chef.co/view/Chef%20Compliance/"
+    },
+    {
+      "name" : "Chef Manage",
+      "url" : "http://wilson.ci.chef.co/view/Chef%20Manage/"
+    },
+    {
+      "name" : "Chef Marketplace",
+      "url" : "http://wilson.ci.chef.co/view/Chef%20Marketplace/"
+    },
+    {
+      "name" : "Chef Server 12",
+      "url" : "http://wilson.ci.chef.co/view/Chef%20Server%2012/"
+    },
+    {
+      "name" : "Push Jobs Server",
+      "url" : "http://wilson.ci.chef.co/view/Push%20Jobs%20Server/"
+    },
+    {
+      "name" : "Reporting",
+      "url" : "http://wilson.ci.chef.co/view/Reporting/"
+    },
+    {
+      "name" : "Supermarket",
+      "url" : "http://wilson.ci.chef.co/view/Supermarket/"
+    }
+  ]
+}

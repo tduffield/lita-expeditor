@@ -21,6 +21,14 @@ Lita.load_locales Dir[File.expand_path(
   File.join("..", "..", "locales", "*.yml"), __FILE__
 )]
 
+require "expeditor/monkeypatch/lita/response"
+require "expeditor/monkeypatch/lita/adapters/slack"
+
+require "expeditor/version"
+require "expeditor/jenkins"
+require "expeditor/github"
+require "expeditor/slack"
+
 require "lita/handlers/expeditor"
 
 Lita::Handlers::Expeditor.template_root File.expand_path(

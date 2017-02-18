@@ -15,4 +15,25 @@
 # limitations under the License.
 #
 
-require "expeditor/slack/format"
+require "spec_helper"
+
+describe Lita::Response do
+  subject { described_class.new(message, /dummy regexp/) }
+
+  let(:message) { instance_double("Lita::Message").as_null_object }
+  let(:string) { "test string" }
+
+  describe "#success" do
+    it "sends message normally" do
+      expect(message).to receive(:reply).with([string])
+      subject.success(string)
+    end
+  end
+
+  describe "#error" do
+    it "sends message normally" do
+      expect(message).to receive(:reply).with([string])
+      subject.error(string)
+    end
+  end
+end

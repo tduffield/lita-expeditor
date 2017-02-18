@@ -15,7 +15,22 @@
 # limitations under the License.
 #
 
-require "expeditor/version"
-require "expeditor/jenkins"
-require "expeditor/github"
-require "expeditor/slack"
+module Expeditor
+  module Slack
+    module Format
+
+      def backquote(text)
+        "`#{text.tr("`", "'")}`"
+      end
+
+      def escape_markdown(text)
+        text = text.gsub("&", "&amp;")
+        text.gsub!("<", "&lt;")
+        text.gsub!(">", "&gt;")
+        text.gsub!(%r{[`*_|=]}) { |c| "&##{c.bytes[0]};" }
+        text
+      end
+
+    end
+  end
+end
